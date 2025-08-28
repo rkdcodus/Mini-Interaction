@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.line {
+  width: 32px;
+  height: 2px;
+  background-color: black;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button:hover {
+  .first-line {
+    width: 40px;
+    transform: rotate(39deg);
+    transform-origin: top left;
+  }
+
+  .second-line {
+    opacity: 0;
+  }
+
+  .third-line {
+    width: 40px;
+    transform: rotate(-39deg);
+    transform-origin: bottom left;
+  }
+}
