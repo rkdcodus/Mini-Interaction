@@ -1,8 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
+  const videoRef = useRef();
+
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   useGSAP(() => {
     const heroSplit = new SplitText(".title", { type: "chars, words" });
     const paragraphSplit = new SplitText(".subtitle", { type: "lines" });
@@ -36,6 +41,26 @@ const Hero = () => {
       })
       .to(".right-leaf", { y: 200 }, 0)
       .to(".left-leaf", { y: -200 }, 0);
+
+    const startValue = isMobile ? "top 50%" : "center 60%";
+    const endValue = isMobile ? "120% top" : "bottom top";
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "video",
+        start: startValue,
+        end: endValue,
+        scrub: true,
+        pin: true,
+      },
+    });
+
+    videoRef.current.onloadedmetadata = () => {
+      //동영상 메타 데이터가 로드된 이후 실행
+      tl.to(videoRef.current, {
+        currentTime: videoRef.current.duration, // 스크롤이 진행된 지점과 동일한 동영상 지점 재생
+      });
+    };
   }, []);
 
   return (
@@ -74,6 +99,17 @@ const Hero = () => {
           </div>
         </div>
       </section>
+
+      <div className='video absolute inset-0'>
+        <video
+          ref={videoRef}
+          muted
+          playsInline
+          preload='auto'
+          src='/videos/output.mp4' //FFmpeg 처리된 비디오 FFmpeg: 오픈소스 멀티미디어 처리 툴, 인코딩, 디코딩, 변환, 편집 가능
+          // 스크롤 재생용으로 변환된 비디오 더 부드러운 스크롤 움직임 구현 가능
+        />
+      </div>
     </>
   );
 };
