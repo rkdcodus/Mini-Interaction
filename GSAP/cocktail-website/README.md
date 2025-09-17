@@ -6,7 +6,7 @@ GSAP 라이브러리를 사용하기 위한 기본적인 지식을 학습합니�
 
 ### 학습 방법
 
-[Javascript Mastery](https://youtu.be/AW1yfBKRMKc?si=VT-rf6qUVshehjF-)의 유튜브 강의를 통해 칵테일 웹 사이트를 함께 제작하며 실습합니다.
+[Javascript Mastery](https://youtu.be/AW1yfBKRMKc?si=VT-rf6qUVshehjF-)의 유튜브 강의를 통해 GSAP을 실습합니다.
 
 ### GSAP이란?
 
