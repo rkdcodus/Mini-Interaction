@@ -16,7 +16,13 @@ DOM 요소, SVG, Canvas, WebGL까지 거의 모든 웹 요소를 애니메이션
 
 GSAP을 사용하면 CSS 애니메이션 대비 정밀 제어가 가능하며 스크롤, 마우스 움직임, 드래그와 같은 사용자 입력 기반의 애니메이션 구현에 용이합니다. 대규모 인터랙티브 웹사이트, 랜딩 페이지, 데이터 시각화에 많이 사용됩니다.
 
-### 완성된 웹 사이트
+### 웹 사이트 애니메이션 시연
+
+![2025-09-18 00;44;32](https://github.com/user-attachments/assets/98a2d7e8-7161-4f28-a2a0-839db4f9487d)
+![2025-09-18 00;45;27](https://github.com/user-attachments/assets/69354b20-2c5b-412f-bd35-01c04b44b1d2)
+![2025-09-18 00;46;08](https://github.com/user-attachments/assets/90e1bc7f-c57c-4850-9cc4-8cfc5399a925)
+![2025-09-18 00;46;34](https://github.com/user-attachments/assets/016da3b8-7f4d-4cce-93b9-7dff43f921dc)
+
 
 ### 칵테일 웹 사이트에서 사용한 GSAP 기능
 
